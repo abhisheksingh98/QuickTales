@@ -1,5 +1,11 @@
 # QuickTales
 
+
+
+https://github.com/user-attachments/assets/edb5c9d1-37b8-440a-9f32-0a956ca827ea
+
+
+
 QuickTales is a React application designed to showcase stories through a beautifully crafted user interface. This application features a **StoryList** component that displays a collection of stories, and a **StoryViewer** component for a detailed view of each story. The application utilizes a custom hook to manage state and fetch images from a local JSON server.
 
 ## Table of Contents
