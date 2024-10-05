@@ -1,55 +1,47 @@
-// src/App.tsx
-import React, { useEffect, useState } from "react";
-import StoryList from "./components/StoryList";
-import StoryViewer from "./components/StoryViewer";
+import "./App.css";
+import StoryList from "./components/StoryList/StoryList";
 
-interface Story {
-  id: number;
-  type: "image" | "video";
-  contentUrl: string;
-  duration: number;
-}
+const stories = [
+  {
+    id: "1",
+    imageUrl: "https://picsum.photos/id/1/200/200",
+    username: "john_doe",
+  },
+  {
+    id: "2",
+    imageUrl: "https://picsum.photos/id/2/200/200",
+    username: "jane_smith",
+  },
+  {
+    id: "3",
+    imageUrl: "https://picsum.photos/id/3/200/200",
+    username: "bob_johnson",
+  },
+  {
+    id: "4",
+    imageUrl: "https://picsum.photos/id/4/200/200",
+    username: "alice_williams",
+  },
+  {
+    id: "5",
+    imageUrl: "https://picsum.photos/id/5/200/200",
+    username: "charlie_brown",
+  },
+];
 
-const App: React.FC = () => {
-  const [stories, setStories] = useState<Story[]>([]);
-  const [selectedStoryId, setSelectedStoryId] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Fetch stories from an external JSON file in the public folder
-    fetch("/stories.json")
-      .then((response) => response.json())
-      .then((data: Story[]) => setStories(data))
-      .catch((error) => console.error("Failed to load stories:", error));
-  }, []);
-
-  const handleStorySelect = (storyId: number) => {
-    setSelectedStoryId(storyId);
-  };
-
-  const handleCloseViewer = () => {
-    setSelectedStoryId(null);
-  };
+function App() {
+  const handleStoryClick = (storyId: string) => {};
 
   return (
-    <div className="app-container flex flex-col items-center bg-gray-100 h-screen">
-      {selectedStoryId === null ? (
-        // Display the horizontal story list if no story is selected
-        <StoryList stories={stories} onStorySelect={handleStorySelect} />
-      ) : (
-        // Display the story viewer for the selected story
-        <StoryViewer stories={stories} />
-      )}
-      {/* Close button for returning to the story list */}
-      {selectedStoryId !== null && (
-        <button
-          className="absolute top-4 right-4 bg-red-500 text-white p-2 rounded-md"
-          onClick={handleCloseViewer}
-        >
-          Close
-        </button>
-      )}
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Instagram</h1>
+      </header>
+      <main className="App-main">
+        <StoryList stories={stories} onStoryClick={handleStoryClick} />
+      </main>
     </div>
   );
-};
+}
 
 export default App;
