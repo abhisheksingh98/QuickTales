@@ -1,52 +1,24 @@
-/* src/styles.css */
-.story-viewer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-  background: #000;
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  min-height: 100vh;
 }
 
-.story {
-  max-height: 100%;
-  max-width: 100%;
+.App-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 0;
 }
 
-.story-image,
-.story-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+.App-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Billboard", "Helvetica Neue", sans-serif;
 }
 
-.progress-indicator {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.progress-bar {
-  height: 100%;
-  background: #fff;
-}
-
-.controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.controls .left,
-.controls .right {
-  width: 50%;
-  height: 100%;
-  cursor: pointer;
+.App-main {
+  padding: 10px 0;
 }

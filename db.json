@@ -1,0 +1,29 @@
+{
+  "stories": [
+    {
+      "id": "1",
+      "imageUrl": "https://picsum.photos/id/1/800/1000",
+      "username": "john_doe"
+    },
+    {
+      "id": "2",
+      "imageUrl": "https://picsum.photos/id/2/800/1000",
+      "username": "jane_smith"
+    },
+    {
+      "id": "3",
+      "imageUrl": "https://picsum.photos/id/3/800/1000",
+      "username": "bob_johnson"
+    },
+    {
+      "id": "4",
+      "imageUrl": "https://picsum.photos/id/4/800/1000",
+      "username": "alice_williams"
+    },
+    {
+      "id": "5",
+      "imageUrl": "https://picsum.photos/id/5/800/1000",
+      "username": "charlie_brown"
+    }
+  ]
+}

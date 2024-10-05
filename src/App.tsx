@@ -1,36 +1,24 @@
+import { useState } from "react";
 import "./App.css";
-import StoryList from "./components/StoryList/StoryList";
 
-const stories = [
-  {
-    id: "1",
-    imageUrl: "https://picsum.photos/id/1/200/200",
-    username: "john_doe",
-  },
-  {
-    id: "2",
-    imageUrl: "https://picsum.photos/id/2/200/200",
-    username: "jane_smith",
-  },
-  {
-    id: "3",
-    imageUrl: "https://picsum.photos/id/3/200/200",
-    username: "bob_johnson",
-  },
-  {
-    id: "4",
-    imageUrl: "https://picsum.photos/id/4/200/200",
-    username: "alice_williams",
-  },
-  {
-    id: "5",
-    imageUrl: "https://picsum.photos/id/5/200/200",
-    username: "charlie_brown",
-  },
-];
+import { useStories } from "./hooks/useStories";
+import StoryList from "./components/StoryList/StoryList";
+import StoryViewer from "./components/StoryViewer/StoryViewer";
 
 function App() {
-  const handleStoryClick = (storyId: string) => {};
+  const { stories, loading, error } = useStories();
+  const [viewingStoryId, setViewingStoryId] = useState<string | null>(null);
+
+  const handleStoryClick = (storyId: string) => {
+    setViewingStoryId(storyId);
+  };
+
+  const handleCloseViewer = () => {
+    setViewingStoryId(null);
+  };
+
+  if (loading) return <div className="App">Loading...</div>;
+  if (error) return <div className="App">Error: {error}</div>;
 
   return (
     <div className="App">
@@ -40,6 +28,13 @@ function App() {
       <main className="App-main">
         <StoryList stories={stories} onStoryClick={handleStoryClick} />
       </main>
+      {viewingStoryId && (
+        <StoryViewer
+          stories={stories}
+          initialStoryId={viewingStoryId}
+          onClose={handleCloseViewer}
+        />
+      )}
     </div>
   );
 }
