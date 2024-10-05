@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# QuickTales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QuickTales is a React application designed to showcase stories through a beautifully crafted user interface. This application features a **StoryList** component that displays a collection of stories, and a **StoryViewer** component for a detailed view of each story. The application utilizes a custom hook to manage state and fetch images from a local JSON server.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Features](#features)
+- [Components](#components)
+  - [StoryList](#storylist)
+  - [StoryViewer](#storyviewer)
+- [Custom Hook](#custom-hook)
+- [JSON Server Setup](#json-server-setup)
+- [Running the Application](#running-the-application)
+- [Testing](#testing)
+- [License](#license)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Responsive Design:** The application is built with a focus on clean, user-friendly interfaces.
+- **Dynamic Story Loading:** Stories are dynamically loaded using a custom hook, ensuring a smooth user experience.
+- **Image Serving:** Utilizes a JSON server to serve images locally, allowing for easy development and testing.
+- **Comprehensive Testing:** Includes unit tests for key components to ensure reliability and maintainability.
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### StoryList
+The `StoryList` component displays a list of stories fetched from the server. Each story is represented with an image and the username of the author. Users can click on a story to view more details in the `StoryViewer`.
 
-- Configure the top-level `parserOptions` property like this:
+### StoryViewer
+The `StoryViewer` component displays the full details of a selected story, including the image and any additional information. It enhances the user experience by providing a focused view of each story.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Custom Hook
+The application features a custom hook, `useStories`, that manages the fetching and state of story data. This hook handles loading, error states, and provides the necessary data to the components.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## JSON Server Setup
+To serve images locally, a JSON server is set up. Follow these steps to run the server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Start the JSON Server:**
+   Run the following command to start the server:
+   ```bash
+   npm run server
+2. **Access Images:**
+   The server will be available at `http://localhost:3001/images`, where you can view the images served.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Running the Application
+To run the QuickTales application locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/abhisheksingh98/QuickTales.git
+
+2. Navigate into the project directory:
+   ```bash
+   cd QuickTales
+
+3. Install the dependencies:
+   ```bash
+   yarn install
+
+4. Run the db server
+   ```bash
+   yarn server
+
+5. Start the application:
+   ```bash
+   yarn dev
+
+# Testing
+To run the tests for the components, use the following command:
+
+  ```bash
+  yarn test
+
