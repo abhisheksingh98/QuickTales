@@ -1,11 +1,6 @@
 import React from "react";
 import "./StoryList.css";
-
-interface Story {
-  id: string;
-  imageUrl: string;
-  username: string;
-}
+import { Story } from "../../hooks/useStories";
 
 interface StoryListProps {
   stories: Story[];
