@@ -2,28 +2,28 @@
   "stories": [
     {
       "id": "1",
-      "imageUrl": "https://picsum.photos/id/1/800/1000",
-      "username": "john_doe"
+      "imageUrl": "https://img.freepik.com/free-photo/dubai-skyline-sunset-time-united-arab-emirates_231208-7631.jpg?t=st=1728160880~exp=1728164480~hmac=a06e6c039b8f5a81b76182f9f799a63fe42f9c1d9a7e2dedb8fe17cefdc38804&w=740",
+      "username": "John Doe"
     },
     {
       "id": "2",
-      "imageUrl": "https://picsum.photos/id/2/800/1000",
-      "username": "jane_smith"
+      "imageUrl": "https://img.freepik.com/premium-photo/skyline-serenity-aerial-view-bluewaters-island-ain-dubai_1127715-414.jpg?w=740",
+      "username": "Jane Smith"
     },
     {
       "id": "3",
-      "imageUrl": "https://picsum.photos/id/3/800/1000",
-      "username": "bob_johnson"
+      "imageUrl": "https://img.freepik.com/premium-photo/dubai-atlantis-area-attractive-buildings-photo_1170530-8952.jpg?w=740",
+      "username": "Bob Johnson"
     },
     {
       "id": "4",
-      "imageUrl": "https://picsum.photos/id/4/800/1000",
-      "username": "alice_williams"
+      "imageUrl": "https://img.freepik.com/free-photo/city-architectural-design_1409-5696.jpg?t=st=1728160946~exp=1728164546~hmac=75ba6aaab3115e5d3698583e137f92e35cbad0f56db2b89bf9cc64288a753a09&w=1380",
+      "username": "Alice Williams"
     },
     {
       "id": "5",
-      "imageUrl": "https://picsum.photos/id/5/800/1000",
-      "username": "charlie_brown"
+      "imageUrl": "https://img.freepik.com/premium-photo/city-skyline-with-river-bridge-with-river-foreground_1068173-4404.jpg?w=740",
+      "username": "Charlie Brown"
     }
   ]
 }

@@ -84,6 +84,9 @@ const StoryViewer: React.FC<StoryViewerProps> = ({
         src={currentStory.imageUrl}
         alt={`${currentStory.username}'s story`}
         className="story-image"
+        style={{
+          borderRadius: currentStoryIndex === -1 ? "0" : "8px", // Apply condition for border radius
+        }}
       />
       <div className="navigation-overlay">
         <div className="previous-area" onClick={handlePreviousStory} />
